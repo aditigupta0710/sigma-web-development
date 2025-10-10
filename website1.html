@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Video & Audio Categories</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; max-width:1000px; margin:20px auto; padding:0 16px;}
+    header{display:flex;align-items:center;justify-content:space-between}
+    h1{font-size:1.4rem;margin:0}
+    .category{margin-top:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+    .card{border:1px solid #ddd;padding:8px;border-radius:6px}
+    iframe{width:100%;height:180px;border:0}
+    audio{width:100%;margin-top:8px}
+    .small{font-size:0.9rem;color:#333}
+    footer{margin-top:30px;font-size:0.85rem;color:#666}
+    @media (max-width:420px){iframe{height:150px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Videos & Audios by Category — Very Basic HTML</h1>
+    <div class="small">Static demo — open this file in browser</div>
+  </header>
+
+  <p class="small">This page shows example categories for videos (YouTube embeds) and audios (native audio player). Replace the sample video IDs and audio URLs with your own.</p>
+
+  <section class="category">
+    <h2>Video Categories</h2>
+
+    <h3>Music</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="small">Song / Music Video</div>
+        <!-- YouTube embed: change the VIDEO_ID below -->
+        <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <div class="small">Live Performance</div>
+        <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h3 style="margin-top:12px">Education</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="small">Quick Tutorial</div>
+        <iframe src="https://www.youtube.com/embed/yi0q3z6R4HY" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <div class="small">Science Explainer</div>
+        <iframe src="https://www.youtube.com/embed/4HcRjzM7Qw8" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h3 style="margin-top:12px">Sports</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="small">Match Highlights</div>
+        <iframe src="https://www.youtube.com/embed/RK1K2bCg4J8" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <div class="small">Training Clip</div>
+        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Audio Categories</h2>
+
+    <h3>Podcasts</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="small">Episode 1 (sample)</div>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="card">
+        <div class="small">Episode 2 (sample)</div>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <h3 style="margin-top:12px">Ambient / Relaxation</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="small">Rain Ambience</div>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="card">
+        <div class="small">Instrumental</div>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="small">Notes: To add your own YouTube video, replace the part after "embed/" in the iframe src with the YouTube video ID. For local audio files, use a relative path like "audio/mysong.mp3" inside the &lt;source&gt; element.</p>
+  </footer>
+</body>
+</html>
