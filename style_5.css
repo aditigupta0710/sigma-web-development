@@ -1,0 +1,51 @@
+/* style.css */
+
+/* General body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+}
+
+/* Section styling */
+section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+
+/* Links */
+a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
