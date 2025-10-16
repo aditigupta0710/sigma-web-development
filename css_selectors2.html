@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+         div{
+            background-color: skyblue;
+         }
+         .red{
+            background-color: red;
+         }
+         #green {
+            background-color: green;
+         }
+         div > p{
+            color:bisque;
+            background-color: black;
+         }
+         div p {
+            color: azure;
+            background-color: brown;
+         }
+         /* Universal selector */
+        * {
+            margin:0;
+            padding:0;
+         }
+         /* Pseudo Selectors */
+         a:visited {
+            color:blue;
+         }
+         a:link {
+            color:aliceblue;
+         }
+    </style>
+</head>
+<body>
+    <h1>
+    Element Selector
+    </h1>
+    <div >
+        hey, i am learning css selectors..
+    </div>
+    <h1>
+    Class Selector
+    </h1>
+    <div class="red">
+        I am class selector
+    </div>
+    <h1>
+        ID Selector
+    </h1>
+        <div id="green">
+            I am Id Selectors
+        </div>
+    <h1>
+        Child Selectors
+    </h1>
+    <div>
+        I am a type of selectors
+        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda cupiditate error omnis quibusdam eveniet saepe.</P>
+     </div>
+    <h1>
+        Descendant Selector
+    </h1>
+    <div>
+        <article>
+        I am a type of selectors
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores libero assumenda maxime sapiente minus praesentium cupiditate, commodi quae?</P>
+        </article>
+     </div>
+<h1>
+    Pseudo Selectors
+</h1>
+<div>
+    <a href="https://www.google.com">Go to GOOGLE</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+</div>
+</body>
+</html>
