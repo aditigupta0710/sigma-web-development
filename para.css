@@ -1,0 +1,8 @@
+div:first-of-type {
+    background-color: black;
+    color: azure;
+}
+div:last-of-type{
+    background-color: blue;
+    color: antiquewhite;
+}
