@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /* the specificity of element selector is: 1 */
+        h1{
+            background-color: aquamarine;
+        }
+        /* the specificity of class selector is: 10 */
+        .yellow{
+            background-color: yellow;
+        }
+        /* the specificity of class selector and element selector is: 10 + 1 = 11 */
+        .cred{
+            background-color: yellow;
+        }
+        /* the specificity of class selector is: 10 */
+        .cpurple{
+            background-color: purple;
+        }
+        /* the specificity of attribute selector is: 10 */
+        [data-x=a]{
+            background-color: green;
+        }
+        /* the specificity of this selector is: 1 + 10 + 10 + 10 + 10 = 41 hover ek pseudocode */
+        a.harryclass.rohan-class[href]:hover {
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="yellow cred cpurple a harryclass rohan-class" data-href hover" data-x="a">lets discuss about css Specificity</h1>
+</body>
+</html>
