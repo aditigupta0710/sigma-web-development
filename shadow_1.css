@@ -1,0 +1,24 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 40px;
+}
+
+/* Text Shadow */
+.text-shadow {
+  font-size: 40px;
+  color: navy;
+  text-shadow: 3px 3px 5px gray; /* x-offset y-offset blur color */
+}
+
+/* Box Shadow */
+.box-shadow {
+  background-color: lightblue;
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+}
