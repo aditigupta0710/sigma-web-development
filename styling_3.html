@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ol {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+}
+li {
+  counter-increment: item;
+  margin: 8px 0;
+  padding: 8px;
+  background: #e0f7fa;
+  border-radius: 6px;
+}
+li::before {
+  content: counter(item) ". ";
+  font-weight: bold;
+  color: #00796b;
+}
+</style>
+</head>
+<body>
+<h3>Steps to Learn CSS</h3>
+<ol>
+  <li>Learn basic selectors</li>
+  <li>Understand box model</li>
+  <li>Practice layouts</li>
+  <li>Build small projects</li>
+</ol>
+</body>
+</html>
