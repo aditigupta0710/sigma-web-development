@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  width: 80%;
+  margin: auto;
+  background-color: lightyellow;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/* Small devices */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    background-color: lightpink;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    background-color: lightgreen;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive Heading</h1>
+    <p>This layout adjusts automatically for different screen sizes.</p>
+  </div>
+</body>
+</html>
