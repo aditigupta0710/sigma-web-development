@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child{ */
+            /* background-color: brown; */
+        /* } */
+        /* .box::first-line{
+            color: blue;
+        } */
+         .boxes * {
+            color: blue;
+            border: 2px solid black;
+         }
+        p , a ,.box , [data-color="primary"]{
+            padding-top: 45px;
+         }
+         .box:nth-child(even){
+            background-color: black];
+         }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non porro ipsum similique molestiae perferendis praesentium culpa architecto, recusandae vero labore quia earum suscipit aperiam ipsa quae? Expedita molestias inventore soluta neque cupiditate nulla laudantium ex nam dolor aut dolorem, eaque, fuga cum ducimus repudiandae esse voluptates quam doloremque nihil temporibus illum quos odit. Omnis, incidunt. Eaque.</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+    </div>
+</body>
+</html>
