@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  gap: 10px;
+}
+
+.header { grid-area: header; background: #ffc107; padding: 20px; }
+.sidebar { grid-area: sidebar; background: #03a9f4; padding: 20px; }
+.main { grid-area: main; background: #4caf50; padding: 20px; }
+.footer { grid-area: footer; background: #ff5722; padding: 20px; }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="main">Main Content</div>
+  <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>
