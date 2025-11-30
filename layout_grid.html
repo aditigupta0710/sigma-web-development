@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr; /* Sidebar + Main */
+      grid-template-rows: 80px 1fr 60px; /* Header, content, footer */
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .header {
+      grid-column: 1 / 3;      /* Header spans two columns */
+      background: #4caf50;
+      padding: 20px;
+      color: white;
+      font-size: 22px;
+    }
+
+    .sidebar {
+      background: #ff9800;
+      padding: 20px;
+      color: white;
+    }
+
+    .main {
+      background: #2196f3;
+      padding: 20px;
+      color: white;
+    }
+
+    .footer {
+      grid-column: 1 / 3;      /* Footer spans two columns */
+      background: #9c27b0;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>
