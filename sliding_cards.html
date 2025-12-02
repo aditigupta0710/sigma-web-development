@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Card Slide Animation</title>
+<style>
+    body{
+        background:#0d0d0d;
+        font-family:Arial;
+        color:white;
+        display:flex;
+        justify-content:center;
+        gap:30px;
+        padding-top:80px;
+    }
+
+    .card{
+        width:180px;
+        height:220px;
+        background:#222;
+        border-radius:20px;
+        padding:20px;
+        animation: slideUp 1.4s ease forwards;
+        opacity:0;
+        transition:0.4s;
+    }
+
+    .card:hover{
+        transform:translateY(-15px) scale(1.05);
+        box-shadow:0 15px 25px rgba(0,0,0,0.5);
+    }
+
+    @keyframes slideUp{
+        from{ transform:translateY(40px); opacity:0; }
+        to  { transform:translateY(0); opacity:1; }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">Card 1</div>
+<div class="card">Card 2</div>
+<div class="card">Card 3</div>
+
+</body>
+</html>
