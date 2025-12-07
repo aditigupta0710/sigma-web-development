@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic jumping ball</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: aquamarine;
+            overflow: hidden;
+            position: relative;
+        }
+        .ball{
+            width: 60px;
+            height: 60px;
+            background: red;
+            border-radius: 60%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+
+            transition: transform 0.2s ease;
+            animation: jump 1.2s infinite;
+        }
+            @keyframes jump {
+            0%{
+                transform: translate(0,0) 
+                scale(1 , 1);
+            }
+            10%{
+                transform: translate(0,0)
+                 scale(1.2 , 0.8);
+            }
+            40%{
+                transform: translate(150px,-220px)
+                 scale(0.9 , 1.1);
+                animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 1);
+            }
+            50%{
+                transform: translate(180px,-250px) scale(1,1);
+                animation-timing-function: ease-in;
+            }
+            80%{
+                transform: translate(250px,-50px);
+            }
+            90%{
+                transform: translate(280px,0px) scale(1.2 , 0.7);
+            }
+            100%{
+                transform: translate(300px , 0) scale(1,1);
+            }
+            }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>
