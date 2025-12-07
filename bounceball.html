@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball from bottom left</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: rgb(170, 17, 17);
+            /* display: flex; */
+            overflow: hidden;
+            position: relative;
+        }
+        .Ball{
+            width: 60px;
+            height: 60px;
+            color: red;
+            border-radius: 60%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: transform 0.3s ease , 
+            background 0.3s ease;
+            animation: bounceXY 3s infinite ease-in-out;
+        }
+            @keyframes bounceXY {
+            0%{
+                transform: translate(0px,0px) scale(1);
+                background: white;
+            }
+            25%{
+                transform: translate(300px, -200px) scale(1.1);
+                background: rgb(241, 241, 32);
+            }
+            50%{
+                transform: translate(3000px,-350px) scale(0.9);
+                background: rgb(252, 73, 2);
+            }
+            75%{
+                transform: translate(0px,-200px) scale(1.1);
+                background: green;
+            }
+            100%{
+                transform: translate(0px,0px) scale(1);
+                background: white;
+            }
+            }
+    </style>
+</head>
+<body>
+    <div class="Ball"></div>
+</body>
+</html>
