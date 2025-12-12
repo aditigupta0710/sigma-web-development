@@ -1,0 +1,121 @@
+:root{
+  --bg: #f6f7fb;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #4f46e5; /* primary color (change like in Figma) */
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(15,23,42,0.08);
+  --gap: 16px;
+  --max-width: 860px;
+  --type-base: 16px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  font-size:var(--type-base);
+  background:linear-gradient(180deg,var(--bg), #fff 60%);
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:48px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.page{
+  width:100%;
+  max-width:var(--max-width);
+}
+
+/* Card */
+.card{
+  display:flex;
+  gap:var(--gap);
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+  align-items:flex-start;
+}
+
+/* Image: typical Figma exported asset sizing */
+.card__image{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+  flex-shrink:0;
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+/* Content */
+.card__content{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0; /* allow truncation */
+}
+.card__title{
+  margin:0;
+  font-size:18px;
+  line-height:1.1;
+}
+.card__subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.card__text{
+  margin:0;
+  color:#294056;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* Actions layout */
+.card__actions{
+  margin-top:8px;
+  display:flex;
+  gap:10px;
+}
+
+/* Buttons (easy to style like Figma components) */
+.btn{
+  border: 1px solid rgba(15,23,42,0.08);
+  background:transparent;
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+}
+.btn--primary{
+  background:var(--accent);
+  color:white;
+  border-color:transparent;
+  box-shadow: 0 6px 18px rgba(79,70,229,0.18);
+}
+.btn:active{ transform:translateY(1px); }
+
+/* Responsiveness: stack on small screens (mimics Figma responsive constraints) */
+@media (max-width:520px){
+  .card{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .card__image{ width:160px; height:160px; }
+  .card__content{ align-items:center; }
+  .card__actions{ justify-content:center; width:100%; }
+}
+
+/* Utility: truncate long text from Figma frames */
+.truncate{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
